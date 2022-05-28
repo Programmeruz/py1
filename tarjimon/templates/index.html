@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Online lug'at</title>
+    <link rel="stylesheet" href="{% static 'semantic/semantic.min.css' %}">
+  </head>
+  <body>
+    <div class="ui header segment">
+      <div class="ui contenier">
+        <h1>Onlayn lug'at</h1>
+        <div class="ui divider"></div>
+        <p>Tezlik,qulaylika va bepul tarjimon</p>
+      </div>
+    </div>
+    <div class="ui contenier">
+      <div class="ui placeholder segment">
+        <div class="ui icon header">
+          Inglizcha-O'zbekcha, O'zbekcha-Inglizcha
+        </div>
+        <div class="inline" style="width: 90%;">
+          <div class="ui massive form search">
+            <form method="GET" action="/" class="ui icon input" style="width: 100%;">
+              <input type="text" name="q" value="{{key}}" class="prompt" placeholder="Istalgan sozni kiriting..."><i class="search link icon"></i>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="ui piled segment">
+        <h4>Natija</h4>
+        <table class="ui celled large olive table">
+          <thead>
+            <tr>
+              <th><i class="united kingdom flag"></i> Inglizcha</th>
+              <th><i class="uzbekistan flag"></i> O'zbekcha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ r1 }}</td>
+              <td>{{ r2 }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
